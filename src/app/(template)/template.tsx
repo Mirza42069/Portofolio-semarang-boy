@@ -1,5 +1,5 @@
 import Navbar from "@/components/portfolio/navigation/navbar";
-import { SmoothCursor } from "@/labs-registry/components-v1/smooth-cursor";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export default function RootTemplate({
   children,

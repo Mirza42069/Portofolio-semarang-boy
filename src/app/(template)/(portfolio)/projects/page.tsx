@@ -1,4 +1,3 @@
-import { PathUtils } from "fumadocs-core/source";
 
 import { HeaderBanner } from "./banner.client";
 import { projectsData } from "@/constants/portfolio/projects";
@@ -20,8 +19,4 @@ export default function ProjectsPage() {
       </section>
     </main>
   );
-}
-
-function _getName(path: string) {
-  return PathUtils.basename(path, PathUtils.extname(path));
 }

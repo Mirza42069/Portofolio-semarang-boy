@@ -46,7 +46,7 @@ export default function NavbarClient() {
   return (
     <header>
       <div
-        className={`fixed top-0 right-0 left-0 z-50 h-[var(--navbar-height)] border-separator/10 border-b p-4 backdrop-blur-sm transition duration-300 ${!isAtTop && "bg-background/50 dark:bg-background/30"}`}
+        className={`fixed top-0 right-0 left-0 z-50 h-(--navbar-height) border-separator/10 border-b p-4 backdrop-blur-sm transition duration-300 ${!isAtTop && "bg-background/50 dark:bg-background/30"}`}
       >
         <div className="inner flex items-center justify-between md:px-8">
           {matchPath(pathname, separatorItems) && (

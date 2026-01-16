@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest, ProxyConfig } from "next/server";
 import type { LinkSchema } from "dub/models/components";
 import { isDefinedRoute } from "./generated/routes";
-import { betterFetch } from "@better-fetch/fetch";
+
 
 // In-memory cache for Dub API responses with TTL
 const dubCache = new Map<
@@ -46,7 +46,7 @@ export async function proxy(request: NextRequest) {
   }
 
   try {
-    const dubResponse = await betterFetch(
+    const res = await fetch(
       `https://api.dub.co/links/info?domain=go.hexaa.sh&key=${pathname}`,
       {
         headers: {
@@ -55,13 +55,13 @@ export async function proxy(request: NextRequest) {
       },
     );
 
-    if (!dubResponse.data) {
-      // Cache negative result
+    if (!res.ok) {
+        // Cache negative result
       dubCache.set(pathname, { data: null, timestamp: Date.now() });
       return NextResponse.next();
     }
 
-    const linkData = dubResponse.data as LinkSchema;
+    const linkData = (await res.json()) as LinkSchema;
 
     // Cache positive result
     dubCache.set(pathname, { data: linkData, timestamp: Date.now() });
