@@ -40,7 +40,7 @@ export default function HeroSection() {
       >
         <span className="flex flex-col *:transition-all lg:pb-64">
           <h1 className="font-medium font-montreal text-3xl sm:text-4xl lg:text-[2.5rem] lg:leading-14">
-            hey, i&apos;m hexaa 👋
+            hey, i&apos;m vitram 👋
           </h1>
           <p className="max-w-[450px] text-xs leading-4 sm:text-sm lg:text-base lg:leading-5">
             a self-taught software engineer with a strong foundation in

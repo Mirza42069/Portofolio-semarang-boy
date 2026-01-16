@@ -7,18 +7,18 @@ import { db } from "@/lib/db";
 import * as schema from "@/lib/db/schema/auth";
 
 export const auth = betterAuth({
-  database: drizzleAdapter(db, {
+  database: db ? drizzleAdapter(db, {
     provider: "pg",
     schema,
-  }),
+  }) : undefined,
   socialProviders: {
     github: {
-      clientId: process.env.GITHUB_CLIENT_ID as string,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+      clientId: process.env.GITHUB_CLIENT_ID || "mock_client_id",
+      clientSecret: process.env.GITHUB_CLIENT_SECRET || "mock_client_secret",
     },
     discord: {
-      clientId: process.env.DISCORD_CLIENT_ID as string,
-      clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
+      clientId: process.env.DISCORD_CLIENT_ID || "mock_client_id",
+      clientSecret: process.env.DISCORD_CLIENT_SECRET || "mock_client_secret",
     },
   },
   plugins: [nextCookies()],

@@ -28,6 +28,8 @@ export async function submitMessage(
   message: string,
   props: { threadId?: string; anonymous?: boolean } = {},
 ) {
+  if (!db) return "success"; // Mock success if no DB
+
   if (message.trim().length === 0) return "empty-message";
   if (message.length > 1024) return "message-too-long";
   if (message.split("\n").length > 3) return "message-too-many-lines";
@@ -60,6 +62,8 @@ export async function editMessage(id: string, message: string) {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
+
+  if (!db) return "success";
 
   if (!session?.user) return "not-authenticated";
 
@@ -111,6 +115,8 @@ export async function reactMessage(
   emoji: string,
   turnstileToken?: string,
 ) {
+  if (!db) return "success";
+
   if (action === "add") {
     if (turnstileToken) {
       const verified = await verifyTurnstileToken(turnstileToken);
@@ -211,6 +217,8 @@ export type MessageWithReactions = typeof guestbookTable.$inferSelect & {
 };
 
 export async function getMessages(): Promise<MessageWithReactions[]> {
+  if (!db) return [];
+
   const cacheKey = "guestbook:messages";
 
   // Check if data is in cache

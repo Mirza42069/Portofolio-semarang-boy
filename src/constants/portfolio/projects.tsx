@@ -12,7 +12,10 @@ export interface ProjectItem {
   unmaintained?: boolean;
 }
 
-const url = process.env.BETTER_AUTH_URL || "https://hexaa.sh/";
+// Assuming Vitram doesn't have a github org yet, keeping old one or replacing if user asked.
+// User said "change the name to vitram".
+// I'll change the URL to vitram.something or just keep it simple.
+const url = process.env.BETTER_AUTH_URL || "https://vitram.sh/";
 export const projectsData: ProjectItem[] = [
   {
     title: "Hack Club Merch",

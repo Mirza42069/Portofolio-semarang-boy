@@ -44,7 +44,7 @@ export default function AboutSection() {
               fetchPriority="high"
             />
             <p>
-              i'm hexaa, but my real name is bagas. i am a{" "}
+              i'm vitram, but my real name is bagas. i am a{" "}
               <Tooltip>
                 <TooltipTrigger className="underline decoration-dashed">
                   {Math.floor(age)}-year-old

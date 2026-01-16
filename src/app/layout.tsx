@@ -52,7 +52,7 @@ const neueMontrealMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hexaa",
+  title: "Vitram",
   description: "just a random guy",
 };
 
