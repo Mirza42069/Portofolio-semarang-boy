@@ -5,8 +5,6 @@ import { HeaderBanner, SideNoise } from "./banner.client";
 import { ArrowRight } from "lucide-react";
 import { contacts, techStacks } from "@/constants/portfolio/about";
 import { AnimatedBackground } from "@/components/portfolio/animated-background";
-import SocialBento from "@/components/portfolio/social-bento";
-import { getGithubContributions } from "@/lib/portfolio/social";
 import { HackathonCard } from "@/components/portfolio/hackathon-card";
 
 import { PlusSeparator } from "@/components/ui/plus-separator";
@@ -14,8 +12,7 @@ import { PlusSeparator } from "@/components/ui/plus-separator";
 import { hackathons } from "@/constants/portfolio/hackathons";
 import SoonSection from "../soon";
 
-export default async function AboutSection() {
-  const githubContributions = await getGithubContributions();
+export default function AboutSection() {
   return (
     <main>
       <section className="w-full border-separator/10 border-y">
@@ -231,11 +228,6 @@ export default async function AboutSection() {
               <div className="pointer-events-none absolute right-0 bottom-0 h-14 w-1/8 min-w-18 bg-muted-foreground blur-[250px]"></div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="w-full">
-        <div className="inner relative flex gap-2 border-separator/10 border-x px-2 py-3">
-          <SocialBento githubContributions={githubContributions ?? undefined} />
         </div>
       </section>
     </main>

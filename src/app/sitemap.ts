@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const baseUrl = (path: string) =>
-  `${process.env.BETTER_AUTH_URL || "https://vitram.sh"}${path}`;
+  `https://vitram.sh${path}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

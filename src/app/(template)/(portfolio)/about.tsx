@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import useSWR from "swr/immutable";
 
 import { PlusSeparator } from "@/components/ui/plus-separator";
 import {
@@ -8,7 +7,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { wakaTimeData } from "@/lib/actions/wakatime";
 import { cn } from "@/lib/utils";
 
 import Link from "next/link";
@@ -18,7 +16,6 @@ import { CloudflareImage } from "@/components/image";
 const SkillsSection = dynamic(() => import("./about-skills"), { ssr: false });
 
 export default function AboutSection() {
-  const wakatimeStats = useSWR("wakatime", wakaTimeData);
   const [age, setAge] = useState(ageCalc());
 
   useEffect(() => {
@@ -65,34 +62,7 @@ export default function AboutSection() {
               friends, sitting at the chair at all times. so i began exploring
               discord bot templates. i wondered, "what if i could make one
               myself?" and that's what inspired me to start coding. since then,
-              i've invested over{" "}
-              <Tooltip open={wakatimeStats.isLoading ? false : undefined}>
-                <TooltipTrigger
-                  className={cn(
-                    "cursor-pointer underline decoration-dashed",
-                    wakatimeStats.isLoading &&
-                      "animate-pulse rounded-md bg-accent text-accent",
-                  )}
-                  onClick={() => {
-                    window.open("https://wakatime.com/@hexaaagon", "_blank");
-                  }}
-                >
-                  {wakatimeStats.isLoading
-                    ? "xxxx"
-                    : (
-                        Math.floor(
-                          (wakatimeStats.data?.total_seconds || 0) / 60 / 60,
-                        ) / 1000
-                      ).toFixed(3)}{" "}
-                  hours
-                  <span className="sr-only">WakaTime profile</span>
-                </TooltipTrigger>
-                <TooltipContent className="text-center">
-                  <p>{wakatimeStats.data?.human_readable_total}</p>
-                  <p>Click to open my Wakatime Account</p>
-                </TooltipContent>
-              </Tooltip>{" "}
-              into coding, brainstorming, and even struggling through bugs that
+              i've invested countless hours into coding, brainstorming, and even struggling through bugs that
               seemed impossible to fix.
             </p>
           </div>

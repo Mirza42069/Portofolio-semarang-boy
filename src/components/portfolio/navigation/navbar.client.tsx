@@ -19,7 +19,7 @@ import {
   navItems,
   separatorItems,
 } from "@/constants/navigation/navbar";
-import posthog from "posthog-js";
+
 
 export default function NavbarClient() {
   const isMobile = useIsMobile({ breakpoint: 512 });
@@ -68,13 +68,7 @@ export default function NavbarClient() {
                     variant="ghost"
                     size="icon"
                     className="gap-2 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
-                    onClick={() => {
-                      posthog.capture("buttonClicked", {
-                        location: "navbar-mobile",
-                        section: "main-nav",
-                        value: "open-menu",
-                      });
-                    }}
+
                   >
                    <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +99,6 @@ export default function NavbarClient() {
                           href={item.href}
                           onClick={() => {
                             setOpen(false);
-                            posthog.capture("buttonClicked", {
-                              location: "navbar-mobile",
-                              section: "main-nav",
-                              value: item.title.toLowerCase(),
-                            });
                           }}
                           className="font-montreal text-2xl"
                         >
@@ -135,13 +124,7 @@ export default function NavbarClient() {
                   <Link
                     key={item.title}
                     href={item.href}
-                    onClick={() => {
-                      posthog.capture("buttonClicked", {
-                        location: "navbar",
-                        section: "main-nav",
-                        value: item.title.toLowerCase(),
-                      });
-                    }}
+
                   >
                     {item.title}
                   </Link>
