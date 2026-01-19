@@ -9,7 +9,10 @@ export default function Page() {
       </h1>
       
       <p className="prose prose-neutral w-full dark:prose-invert">
-        {DATA.description}
+        {DATA.descriptionPart1}
+        <span className="font-bold text-orange-500 dark:text-purple-400">{DATA.location}</span>
+        {". "}
+        <span className="font-bold text-orange-500 dark:text-purple-400">{DATA.openToWork}</span>
       </p>
       
       <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 my-8">
