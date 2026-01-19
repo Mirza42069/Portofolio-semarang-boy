@@ -4,11 +4,12 @@ import { Code, HomeIcon, SquareTerminal } from "lucide-react";
 export const DATA = {
   name: "Vitram",
   url: "https://vitram.dev/",
-  descriptionPart1: "Professional debugger of my own bugs. I turn coffee into code and deadlines into all-nighters. Currently surviving my thesis while pretending I know what I'm doing. Based in ",
+  descriptionPart1:
+    "Professional debugger of my own bugs. I turn coffee into code and deadlines into all-nighters. Currently surviving my thesis while pretending I know what I'm doing. Based in ",
   location: "Semarang, Indonesia",
   openToWork: "Open to work (and free food).",
-  description: "Computer Engineering student at ITS. Open to work. Based in Semarang, Indonesia.",
-  summary: "Legend has it I'm a final semester Computer Engineering student at ITS, Surabaya. I spend 90% of my time asking ChatGPT and the other 10% copying the answers. My thesis supervisor thinks I'm working hard, but really I'm just switching between VS Code and manhwa websites. I've mastered the art of looking busy while doing absolutely nothing productive. Skills include: blaming the compiler, asking 'did you try restarting it?', and making bugs disappear by not looking at them.",
+  summary:
+    "Legend has it I'm a final semester Computer Engineering student at ITS, Surabaya. I spend 90% of my time asking ChatGPT and the other 10% copying the answers. My thesis supervisor thinks I'm working hard, but really I'm just switching between VS Code and manhwa websites. I've mastered the art of looking busy while doing absolutely nothing productive. Skills include: blaming the compiler, asking 'did you try restarting it?', and making bugs disappear by not looking at them.",
   images: [
     { title: "Profile", href: "/orang.png" },
     { title: "Guitar", href: "/gitar.png" },
@@ -44,7 +45,8 @@ export const DATA = {
       href: "#",
       dates: "2025 - Present",
       active: true,
-      description: "My final year thesis project at ITS, focusing on research and development in Computer Engineering. Details coming soon.",
+      description:
+        "My final year thesis project at ITS, focusing on research and development in Computer Engineering. Details coming soon.",
       iconLists: [],
       links: [
         {
