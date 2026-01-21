@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Code, HomeIcon, SquareTerminal } from "lucide-react";
+import { Code, Github, Globe, HomeIcon, SquareTerminal } from "lucide-react";
 
 export const DATA = {
   name: "Vitram",
@@ -38,21 +38,117 @@ export const DATA = {
       },
     },
   },
-  projectssummary: "wes lagi nganggur",
+  projectssummary:
+    "A collection of things I've built, broken, and occasionally fixed.",
   projects: [
     {
-      title: "Thesis Project",
+      title: "IoT Smart Home System",
+      tagline: "Home automation with ESP32",
       href: "#",
-      dates: "2025 - Present",
-      active: true,
-      description:
-        "My final year thesis project at ITS, focusing on research and development in Computer Engineering. Details coming soon.",
+      year: 2025,
+      status: "active" as const,
+      featured: true,
       iconLists: [],
       links: [
         {
-          type: "View Project",
+          type: "Demo",
+          href: "#",
+          icon: <Globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Github className="size-3" />,
+        },
+      ],
+      image: "/pc.jpg",
+      video: "",
+    },
+    {
+      title: "Porto-vit",
+      tagline: "Personal portfolio with Next.js",
+      href: "#",
+      year: 2024,
+      status: "completed" as const,
+      featured: false,
+      iconLists: [],
+      links: [
+        {
+          type: "Source",
+          href: "#",
+          icon: <Github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Campus Event Tracker",
+      tagline: "Mobile app for ITS events",
+      href: "#",
+      year: 2024,
+      status: "completed" as const,
+      featured: false,
+      iconLists: [],
+      links: [
+        {
+          type: "View",
           href: "#",
           icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/work.jpeg",
+      video: "",
+    },
+    {
+      title: "CLI Task Manager",
+      tagline: "Terminal todo app in Go",
+      href: "#",
+      year: 2023,
+      status: "completed" as const,
+      featured: false,
+      iconLists: [],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Weather Station",
+      tagline: "Arduino sensor data logger",
+      href: "#",
+      year: 2023,
+      status: "archived" as const,
+      featured: false,
+      iconLists: [],
+      links: [
+        {
+          type: "Docs",
+          href: "#",
+          icon: <SquareTerminal className="size-3" />,
+        },
+      ],
+      image: "/bike.png",
+      video: "",
+    },
+    {
+      title: "Student Portal Scraper",
+      tagline: "Automates grade checking script",
+      href: "#",
+      year: 2022,
+      status: "archived" as const,
+      featured: false,
+      iconLists: [],
+      links: [
+        {
+          type: "GitHub",
+          href: "#",
+          icon: <Github className="size-3" />,
         },
       ],
       image: "",
