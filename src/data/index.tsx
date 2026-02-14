@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Code, Github, Globe, HomeIcon, SquareTerminal } from "lucide-react";
+import { Code, HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Vitram",
@@ -42,63 +42,31 @@ export const DATA = {
     "A collection of things I've built, broken, and occasionally fixed.",
   projects: [
     {
-      title: "IoT Smart Home System",
+      title: "IoT Smart Home",
       tagline: "Home automation with ESP32",
       href: "#",
       year: 2025,
       status: "active" as const,
-      featured: true,
-      iconLists: [],
-      links: [
-        {
-          type: "Demo",
-          href: "#",
-          icon: <Globe className="size-3" />,
-        },
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Github className="size-3" />,
-        },
-      ],
-      image: "/pc.jpg",
-      video: "",
+      colSpan: 2,
+      rowSpan: 2,
     },
     {
       title: "Porto-vit",
-      tagline: "Personal portfolio with Next.js",
+      tagline: "Portfolio with Next.js",
       href: "#",
       year: 2024,
       status: "completed" as const,
-      featured: false,
-      iconLists: [],
-      links: [
-        {
-          type: "Source",
-          href: "#",
-          icon: <Github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
+      colSpan: 2,
+      rowSpan: 1,
     },
     {
-      title: "Campus Event Tracker",
+      title: "Event Tracker",
       tagline: "Mobile app for ITS events",
       href: "#",
       year: 2024,
       status: "completed" as const,
-      featured: false,
-      iconLists: [],
-      links: [
-        {
-          type: "View",
-          href: "#",
-          icon: <SquareTerminal className="size-3" />,
-        },
-      ],
-      image: "/work.jpeg",
-      video: "",
+      colSpan: 1,
+      rowSpan: 2,
     },
     {
       title: "CLI Task Manager",
@@ -106,17 +74,8 @@ export const DATA = {
       href: "#",
       year: 2023,
       status: "completed" as const,
-      featured: false,
-      iconLists: [],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
+      colSpan: 1,
+      rowSpan: 1,
     },
     {
       title: "Weather Station",
@@ -124,35 +83,17 @@ export const DATA = {
       href: "#",
       year: 2023,
       status: "archived" as const,
-      featured: false,
-      iconLists: [],
-      links: [
-        {
-          type: "Docs",
-          href: "#",
-          icon: <SquareTerminal className="size-3" />,
-        },
-      ],
-      image: "/bike.png",
-      video: "",
+      colSpan: 2,
+      rowSpan: 1,
     },
     {
-      title: "Student Portal Scraper",
-      tagline: "Automates grade checking script",
+      title: "Portal Scraper",
+      tagline: "Automates grade checking",
       href: "#",
       year: 2022,
       status: "archived" as const,
-      featured: false,
-      iconLists: [],
-      links: [
-        {
-          type: "GitHub",
-          href: "#",
-          icon: <Github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
+      colSpan: 1,
+      rowSpan: 1,
     },
   ],
 } as const;

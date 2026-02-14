@@ -111,7 +111,7 @@
       --popover: oklch(0.1797 0.0043 308.1928);
       --popover-foreground: oklch(0.8109 0 0);
 
-      --primary: oklch(0.7214 0.1337 49.9802);
+      --primary: oklch(0.7100 0.1500 310.0000);
       --primary-foreground: oklch(0.1797 0.0043 308.1928);
 
       --secondary: oklch(0.5940 0.0443 196.0233);
@@ -128,7 +128,7 @@
 
       --border: oklch(0.2520 0 0);
       --input: oklch(0.2520 0 0);
-      --ring: oklch(0.7214 0.1337 49.9802);
+      --ring: oklch(0.7100 0.1500 310.0000);
       --chart-1: oklch(0.5940 0.0443 196.0233);
       --chart-2: oklch(0.7214 0.1337 49.9802);
       --chart-3: oklch(0.8721 0.0864 68.5474);
@@ -186,6 +186,40 @@
     body {
       @apply bg-background text-foreground;
     }
+  }
+
+  .grid-background {
+    --grid-line: oklch(0 0 0 / 0.08);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px);
+    background-size: 1px 100%;
+    background-position:
+      16.66% 0,
+      33.33% 0,
+      66.66% 0,
+      83.33% 0;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
+  }
+
+  .dark .grid-background {
+    --grid-line: oklch(1 0 0 / 0.12);
   }
 
   h3 code {

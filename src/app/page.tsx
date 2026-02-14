@@ -78,11 +78,9 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="prose prose-neutral dark:prose-invert">
-        <p className="text-muted-foreground">
-          {DATA.summary}
-        </p>
-      </div>
+      <p className="prose prose-neutral w-full dark:prose-invert">
+        {DATA.summary}
+      </p>
     </section>
   );
 }
